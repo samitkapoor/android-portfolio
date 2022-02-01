@@ -20,7 +20,6 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   void initState() {
-    super.initState();
     animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 3),
@@ -31,18 +30,19 @@ class _SplashScreenState extends State<SplashScreen>
     );
 
     animationController?.forward();
+    super.initState();
   }
 
   @override
   void dispose() {
-    super.dispose();
     animationController?.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(milliseconds: 1200)).then((value) {
-      Navigator.of(context).push(
+      Navigator.of(context).pushReplacement(
         CustomPageRoute(child: ProfileScreen()),
       );
     });

@@ -16,11 +16,11 @@ class SamitKapoor extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xff01DAD9),
+        scaffoldBackgroundColor: const Color(0xff01DAD9),
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
       getPages: [
-        GetPage(name: SplashScreen.routeName, page: () => SplashScreen()),
+        GetPage(name: SplashScreen.routeName, page: () => const SplashScreen()),
         GetPage(name: ProfileScreen.routeName, page: () => ProfileScreen()),
       ],
     );
