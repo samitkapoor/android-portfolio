@@ -54,21 +54,9 @@ class _SplashScreenState extends State<SplashScreen>
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                transform: GradientRotation(-0.09),
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color(0xff060F1E),
-                  Color(0xff08172E),
-                  Color(0xff0E2B53),
-                  Color(0xff124379),
-                  Color(0xff105181),
-                  Color(0xff0D7198),
-                  Color(0xff089BB0),
-                  Color(0xff06C4C8),
-                  Color(0xff01DAD9),
-                ],
+              image: DecorationImage(
+                image: AssetImage('assets/images/splash_screen_bg.png'),
+                fit: BoxFit.cover,
               ),
             ),
           ),
