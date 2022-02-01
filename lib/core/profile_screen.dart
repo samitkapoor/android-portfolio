@@ -10,16 +10,44 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: RTLFadeAnimationBuilder(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CircleAvatar(
-              radius: Get.width / 2 - 20,
-              backgroundColor: Colors.white,
-            ),
-          ],
+      backgroundColor: const Color(0xff0048e8),
+      body: Container(
+        height: Get.height,
+        width: Get.width,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/profile_screen_bg.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: RTLFadeAnimationBuilder(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Material(
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(Get.width),
+                ),
+                color: Colors.black,
+                child: Container(
+                  height: Get.width / 1.7,
+                  width: Get.width / 1.7,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/samit_kapoor.jpg'),
+                    ),
+                    border: Border.all(color: Colors.black, width: 5),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 50),
+              Text('Hi there! 👋', style: Get.theme.textTheme.caption),
+              Text('📛 I\'m Samit Kapoor', style: Get.theme.textTheme.caption),
+            ],
+          ),
         ),
       ),
     );

@@ -17,6 +17,17 @@ class SamitKapoor extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xff01DAD9),
+        shadowColor: const Color(0xff006666),
+        textTheme: const TextTheme(
+          caption: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 32,
+            color: Colors.black,
+            fontStyle: FontStyle.italic,
+            wordSpacing: 1,
+            fontFamily: 'LoveGlitter',
+          ),
+        ),
       ),
       home: const SplashScreen(),
       getPages: [
