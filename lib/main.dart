@@ -27,6 +27,13 @@ class SamitKapoor extends StatelessWidget {
             wordSpacing: 1,
             fontFamily: 'LoveGlitter',
           ),
+          overline: TextStyle(
+            fontSize: 18,
+            color: Colors.black54,
+            fontFamily: 'Comfortaa',
+            letterSpacing: 0.5,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
       home: const SplashScreen(),

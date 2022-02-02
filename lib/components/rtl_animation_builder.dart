@@ -12,7 +12,7 @@ class RTLFadeAnimationBuilder extends StatefulWidget {
 }
 
 class _RTLFadeAnimationBuilderState extends State<RTLFadeAnimationBuilder>
-    with TickerProviderStateMixin {
+    with SingleTickerProviderStateMixin {
   Animation? rtlAnimation;
   AnimationController? rtlAnimationController;
 

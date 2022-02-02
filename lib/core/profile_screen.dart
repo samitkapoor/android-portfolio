@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'package:samit_kapoor/components/opacity_animation_builder.dart';
 import 'package:samit_kapoor/components/rtl_animation_builder.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -25,6 +26,7 @@ class ProfileScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              const Spacer(),
               Material(
                 elevation: 10,
                 shape: RoundedRectangleBorder(
@@ -46,6 +48,12 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: 50),
               Text('Hi there! 👋', style: Get.theme.textTheme.caption),
               Text('📛 I\'m Samit Kapoor', style: Get.theme.textTheme.caption),
+              const Spacer(),
+              OpacityAnimationBuilder(
+                child: Text('Tap anywhere to continue',
+                    style: Get.theme.textTheme.overline),
+              ),
+              const SizedBox(height: 20),
             ],
           ),
         ),
