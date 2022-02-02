@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:samit_kapoor/core/about_me.dart';
+import 'package:samit_kapoor/core/contact_me.dart';
 import 'package:samit_kapoor/core/profile_screen.dart';
+import 'package:samit_kapoor/core/projects.dart';
 import 'package:samit_kapoor/core/splash_screen.dart';
 
 void main() {
@@ -51,7 +53,9 @@ class SamitKapoor extends StatelessWidget {
       getPages: [
         GetPage(name: SplashScreen.routeName, page: () => const SplashScreen()),
         GetPage(name: ProfileScreen.routeName, page: () => ProfileScreen()),
-        GetPage(name: Homescreen.routeName, page: () => Homescreen()),
+        GetPage(name: About.routeName, page: () => About()),
+        GetPage(name: ContactMe.routeName, page: () => ContactMe()),
+        GetPage(name: Projects.routeName, page: () => Projects()),
       ],
     );
   }

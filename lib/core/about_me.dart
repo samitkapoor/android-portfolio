@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'package:samit_kapoor/components/custom_bottom_app_bar.dart';
 import 'package:samit_kapoor/components/opacity_animation_builder.dart';
 
-class Homescreen extends StatelessWidget {
-  const Homescreen({Key? key}) : super(key: key);
+class About extends StatelessWidget {
+  const About({Key? key}) : super(key: key);
   static const routeName = '/about-me';
   @override
   Widget build(BuildContext context) {
@@ -103,6 +103,7 @@ class Homescreen extends StatelessWidget {
         ),
         bottomNavigationBar: CustomBottomAppBar(
           backgroundColor: Colors.black,
+          onPage: OnPage.about,
         ),
       ),
     );
