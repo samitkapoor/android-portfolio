@@ -79,7 +79,7 @@ class CustomBottomAppBar extends StatelessWidget {
         'onPressed': onPage == OnPage.contact
             ? () {}
             : () {
-                Navigator.of(context).pushReplacement(
+                Navigator.of(context).push(
                   CustomPageRoute(
                     child: ContactMe(),
                     transition: Transitions.slide,
