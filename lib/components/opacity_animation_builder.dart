@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 
 class OpacityAnimationBuilder extends StatefulWidget {
   Widget child;
+  Duration duration;
 
-  OpacityAnimationBuilder({Key? key, required this.child}) : super(key: key);
+  OpacityAnimationBuilder(
+      {Key? key, required this.child, required this.duration})
+      : super(key: key);
 
   @override
   _OpacityAnimationBuilderState createState() =>
@@ -36,7 +39,7 @@ class _OpacityAnimationBuilderState extends State<OpacityAnimationBuilder>
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 3)).then((value) {
+    Future.delayed(widget.duration).then((value) {
       opacityAnimationController?.forward();
     });
 

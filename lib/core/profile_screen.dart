@@ -67,8 +67,11 @@ class ProfileScreen extends StatelessWidget {
                     style: Get.theme.textTheme.caption),
                 const Spacer(),
                 OpacityAnimationBuilder(
-                  child: Text('Tap anywhere to continue',
-                      style: Get.theme.textTheme.overline),
+                  child: Text(
+                    'Tap anywhere to continue',
+                    style: Get.theme.textTheme.overline,
+                  ),
+                  duration: const Duration(seconds: 3),
                 ),
                 const SizedBox(height: 20),
               ],
