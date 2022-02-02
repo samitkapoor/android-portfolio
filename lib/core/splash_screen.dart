@@ -47,7 +47,10 @@ class _SplashScreenState extends State<SplashScreen>
 
     Future.delayed(const Duration(milliseconds: 1500)).then((value) {
       Navigator.of(context).pushReplacement(
-        CustomPageRoute(child: ProfileScreen()),
+        CustomPageRoute(
+            child: ProfileScreen(),
+            transition: Transitions.slide,
+            duration: const Duration(seconds: 2)),
       );
     });
 

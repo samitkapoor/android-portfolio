@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'package:samit_kapoor/core/about_me.dart';
 import 'package:samit_kapoor/core/profile_screen.dart';
 import 'package:samit_kapoor/core/splash_screen.dart';
 
@@ -16,8 +17,6 @@ class SamitKapoor extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xff01DAD9),
-        shadowColor: const Color(0xff006666),
         textTheme: const TextTheme(
           caption: TextStyle(
             fontWeight: FontWeight.bold,
@@ -28,7 +27,7 @@ class SamitKapoor extends StatelessWidget {
             fontFamily: 'LoveGlitter',
           ),
           overline: TextStyle(
-            fontSize: 18,
+            fontSize: 12,
             color: Colors.black54,
             fontFamily: 'Comfortaa',
             letterSpacing: 0.5,
@@ -40,6 +39,7 @@ class SamitKapoor extends StatelessWidget {
       getPages: [
         GetPage(name: SplashScreen.routeName, page: () => const SplashScreen()),
         GetPage(name: ProfileScreen.routeName, page: () => ProfileScreen()),
+        GetPage(name: Homescreen.routeName, page: () => Homescreen()),
       ],
     );
   }
