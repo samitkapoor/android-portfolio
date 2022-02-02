@@ -47,6 +47,12 @@ class SamitKapoor extends StatelessWidget {
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
+          headline4: TextStyle(
+            fontWeight: FontWeight.w900,
+            color: Colors.white,
+            fontFamily: 'Comfortaa',
+            fontSize: 32,
+          ),
         ),
       ),
       home: const SplashScreen(),

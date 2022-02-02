@@ -66,8 +66,9 @@ class CustomBottomAppBar extends StatelessWidget {
                 Navigator.of(context).push(
                   CustomPageRoute(
                     child: Projects(),
-                    transition: Transitions.scale,
-                    duration: const Duration(milliseconds: 250),
+                    transition: Transitions.slide,
+                    duration: const Duration(milliseconds: 450),
+                    offset: const Offset(0, 1),
                   ),
                 );
               }
