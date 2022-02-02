@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class RTLFadeAnimationBuilder extends StatefulWidget {
+class SlideAnimationBuilder extends StatefulWidget {
   Widget child;
+  double begin;
+  double end;
+  Duration duration;
 
-  RTLFadeAnimationBuilder({Key? key, required this.child}) : super(key: key);
+  SlideAnimationBuilder(
+      {Key? key,
+      required this.child,
+      required this.begin,
+      required this.end,
+      this.duration = const Duration(seconds: 1)})
+      : super(key: key);
 
   @override
-  _RTLFadeAnimationBuilderState createState() =>
-      _RTLFadeAnimationBuilderState();
+  _SlideAnimationBuilderState createState() => _SlideAnimationBuilderState();
 }
 
-class _RTLFadeAnimationBuilderState extends State<RTLFadeAnimationBuilder>
+class _SlideAnimationBuilderState extends State<SlideAnimationBuilder>
     with SingleTickerProviderStateMixin {
   Animation? rtlAnimation;
   AnimationController? rtlAnimationController;
@@ -21,10 +29,14 @@ class _RTLFadeAnimationBuilderState extends State<RTLFadeAnimationBuilder>
     rtlAnimationController =
         AnimationController(vsync: this, duration: const Duration(seconds: 3));
     rtlAnimation = Tween<double>(
-      begin: -1 * Get.width,
-      end: 0,
-    ).animate(CurvedAnimation(
-        parent: rtlAnimationController!, curve: Curves.elasticOut));
+      begin: widget.begin,
+      end: widget.end,
+    ).animate(
+      CurvedAnimation(
+        parent: rtlAnimationController!,
+        curve: Curves.elasticOut,
+      ),
+    );
 
     super.initState();
   }
@@ -37,7 +49,7 @@ class _RTLFadeAnimationBuilderState extends State<RTLFadeAnimationBuilder>
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 1)).then((value) {
+    Future.delayed(widget.duration).then((value) {
       rtlAnimationController?.forward();
     });
 

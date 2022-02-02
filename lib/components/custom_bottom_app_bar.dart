@@ -83,8 +83,9 @@ class CustomBottomAppBar extends StatelessWidget {
                   CustomPageRoute(
                     child: ContactMe(),
                     transition: Transitions.slide,
-                    duration: const Duration(milliseconds: 500),
+                    duration: const Duration(seconds: 3),
                     offset: const Offset(1, 0),
+                    curve: Curves.elasticOut,
                   ),
                 );
               }

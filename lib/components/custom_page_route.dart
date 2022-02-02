@@ -7,12 +7,14 @@ class CustomPageRoute extends PageRouteBuilder {
   final Transitions transition;
   final Duration duration;
   Offset offset;
+  Curve curve;
 
   CustomPageRoute({
     required this.child,
     required this.transition,
     required this.duration,
     this.offset = const Offset(0, 1),
+    this.curve = Curves.ease,
   }) : super(
           transitionDuration: duration,
           pageBuilder: (context, animation, secondaryAnimation) => child,
@@ -26,7 +28,9 @@ class CustomPageRoute extends PageRouteBuilder {
         position: Tween<Offset>(
           begin: offset,
           end: Offset.zero,
-        ).animate(CurvedAnimation(parent: animation, curve: Curves.ease)),
+        ).animate(
+          CurvedAnimation(parent: animation, curve: curve),
+        ),
         child: child,
       );
     } else {

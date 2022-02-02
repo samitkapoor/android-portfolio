@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:samit_kapoor/components/custom_page_route.dart';
 import 'package:samit_kapoor/components/opacity_animation_builder.dart';
-import 'package:samit_kapoor/components/rtl_animation_builder.dart';
+import 'package:samit_kapoor/components/slide_animation_builder.dart';
 import 'package:samit_kapoor/core/about_me.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -34,7 +34,7 @@ class ProfileScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: RTLFadeAnimationBuilder(
+          child: SlideAnimationBuilder(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -76,6 +76,8 @@ class ProfileScreen extends StatelessWidget {
                 const SizedBox(height: 20),
               ],
             ),
+            begin: -1 * Get.width,
+            end: 0,
           ),
         ),
       ),
