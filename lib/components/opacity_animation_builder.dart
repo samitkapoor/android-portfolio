@@ -34,8 +34,9 @@ class _OpacityAnimationBuilderState extends State<OpacityAnimationBuilder>
   @override
   void dispose() {
     if (opacityAnimationController?.isAnimating == true ||
-        opacityAnimationController?.isCompleted == true)
+        opacityAnimationController?.isCompleted == true) {
       opacityAnimationController?.dispose();
+    }
     super.dispose();
   }
 

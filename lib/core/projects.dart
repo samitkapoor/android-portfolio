@@ -4,8 +4,6 @@ import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:samit_kapoor/components/custom_bottom_app_bar.dart';
-
 class Projects extends StatelessWidget {
   Projects({Key? key}) : super(key: key);
   static const routeName = '/projects';

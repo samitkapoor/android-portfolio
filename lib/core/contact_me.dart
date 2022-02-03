@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:samit_kapoor/components/slide_animation_builder.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import 'package:samit_kapoor/components/slide_animation_builder.dart';
 
 class ContactMe extends StatelessWidget {
   ContactMe({Key? key}) : super(key: key);

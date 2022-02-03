@@ -18,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
         onTap: () {
           Navigator.of(context).push(
             CustomPageRoute(
-              child: About(),
+              child: const About(),
               transition: Transitions.slide,
               duration: const Duration(milliseconds: 1000),
               offset: const Offset(0, -1),

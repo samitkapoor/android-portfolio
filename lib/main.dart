@@ -8,7 +8,7 @@ import 'package:samit_kapoor/core/projects.dart';
 import 'package:samit_kapoor/core/splash_screen.dart';
 
 void main() {
-  runApp(SamitKapoor());
+  runApp(const SamitKapoor());
 }
 
 class SamitKapoor extends StatelessWidget {
@@ -58,8 +58,9 @@ class SamitKapoor extends StatelessWidget {
       home: const SplashScreen(),
       getPages: [
         GetPage(name: SplashScreen.routeName, page: () => const SplashScreen()),
-        GetPage(name: ProfileScreen.routeName, page: () => ProfileScreen()),
-        GetPage(name: About.routeName, page: () => About()),
+        GetPage(
+            name: ProfileScreen.routeName, page: () => const ProfileScreen()),
+        GetPage(name: About.routeName, page: () => const About()),
         GetPage(name: ContactMe.routeName, page: () => ContactMe()),
         GetPage(name: Projects.routeName, page: () => Projects()),
       ],

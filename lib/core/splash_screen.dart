@@ -28,8 +28,6 @@ class _SplashScreenState extends State<SplashScreen>
       CurvedAnimation(
           parent: animationController!, curve: Curves.fastOutSlowIn),
     );
-
-    // animationController?.forward();
     super.initState();
   }
 
@@ -48,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen>
     Future.delayed(const Duration(milliseconds: 1500)).then((value) {
       Navigator.of(context).pushReplacement(
         CustomPageRoute(
-            child: ProfileScreen(),
+            child: const ProfileScreen(),
             transition: Transitions.slide,
             duration: const Duration(seconds: 2)),
       );

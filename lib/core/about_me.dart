@@ -7,6 +7,7 @@ import 'package:samit_kapoor/components/opacity_animation_builder.dart';
 class About extends StatelessWidget {
   const About({Key? key}) : super(key: key);
   static const routeName = '/about-me';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

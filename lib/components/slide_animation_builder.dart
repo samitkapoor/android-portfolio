@@ -7,13 +7,13 @@ class SlideAnimationBuilder extends StatefulWidget {
   double end;
   Duration duration;
 
-  SlideAnimationBuilder(
-      {Key? key,
-      required this.child,
-      required this.begin,
-      required this.end,
-      this.duration = const Duration(seconds: 1)})
-      : super(key: key);
+  SlideAnimationBuilder({
+    Key? key,
+    required this.child,
+    required this.begin,
+    required this.end,
+    this.duration = const Duration(seconds: 1),
+  }) : super(key: key);
 
   @override
   _SlideAnimationBuilderState createState() => _SlideAnimationBuilderState();
@@ -60,7 +60,9 @@ class _SlideAnimationBuilderState extends State<SlideAnimationBuilder>
           animation: rtlAnimationController!,
           builder: (context, child) {
             return Positioned(
-                left: rtlAnimation!.value, child: child as Widget);
+              left: rtlAnimation!.value,
+              child: child as Widget,
+            );
           },
           child: SizedBox(
             height: Get.height,
