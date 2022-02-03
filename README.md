@@ -4,7 +4,7 @@ This is my developer portfolio application!
 
 # Preview of the Application
 
-![SmartSelect_20220203-171423_One UI Home](https://user-images.githubusercontent.com/77121931/152337507-48685b85-06c1-4cd2-a96a-f875b42d17ce.gif)|![SmartSelect_20220203-171515](https://user-images.githubusercontent.com/77121931/152337572-89e2b3bb-b57e-4d85-a350-504fd289ea5e.gif)|
+![SmartSelect_20220203-171423_One UI Home](https://user-images.githubusercontent.com/77121931/152337507-48685b85-06c1-4cd2-a96a-f875b42d17ce.gif)![SmartSelect_20220203-171515](https://user-images.githubusercontent.com/77121931/152337572-89e2b3bb-b57e-4d85-a350-504fd289ea5e.gif)
 
  Projects Screen           | Contact Me Screen
 :-------------------------:|:-------------------------:|
